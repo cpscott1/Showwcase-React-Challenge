@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Education from './components/Education'
+import Home from './components/Home'
 function App() {
   return (
     <div className="App">
-      <h1>Test</h1>
-      <Education />
+      <h1>Hi there! Welcome to your education showcase.</h1>
+      <Home />
     </div>
   );
 }
