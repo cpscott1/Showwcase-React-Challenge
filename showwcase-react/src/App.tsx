@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home/Home'
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Main from './components/Main/Main';
 function App() {
   return (
     <div className="App">
-      <h1>Hi there! Welcome to your education showcase.</h1>
-      <Home />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/main' component={Main} />
+      </Switch>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'reactstrap';
-import { useHistory, Switch, Route } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Main from '../Main/Main';
 import './home.css'
 
@@ -9,6 +9,7 @@ export default function Home() {
   const history = useHistory()
   return (
     <>
+    <h1>Hi there! Welcome to your education showcase.</h1>
     <form className="home-form" onSubmit={(event) => {
       event.preventDefault()
     }}>
@@ -24,9 +25,6 @@ export default function Home() {
       />
       <Button className="home-button" onClick={() => history.push('/main')}>Enter</Button>
     </form>
-    <Switch>
-      <Route exact path='/main' component={Main} />
-    </Switch>
     </>
   )
 }
